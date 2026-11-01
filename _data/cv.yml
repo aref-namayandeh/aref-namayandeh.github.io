@@ -1,7 +1,7 @@
 cv:
   name: Aref Namayandeh
   label: PhD Student in Information Engineering
-  email: aref@ie.cuhk.edu.hk
+  email: aref [at] ie.cuhk.edu.hk
   location: Hong Kong SAR
   image: ""
   summary: >
@@ -95,26 +95,39 @@ cv:
         releaseDate: "2026"
         url: https://doi.org/10.1016/j.dam.2025.10.031
 
-    Reading Groups and Seminars:
-      - name: Cryptography and Theory of Computation Seminar
-        institution: Sharif University of Technology
-        date: "Summer 2024 and Spring 2025"
-        summary: >
-          Attended the seminar under the supervision of Professor Amir Daneshgar.
+    Talks:
+      - organization: IPM Institute For Research In Fundamental Sciences
+        location: Tehran, Iran (online)
+        date: "Nov 4, 2026"
+        title: An entropic approach to the sumset inequalities
+        url: "https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0"
+        summary: ""
 
-      - name: Differential Privacy Reading Group
-        institution: Sharif University of Technology
-        date: "Spring 2025"
-        summary: >
-          Participated in a reading group and seminar under the supervision
-          of Professor Javad B. Ebrahimi.
+    # Reading Groups and Seminars:
+    #   - name: Cryptography and Theory of Computation Seminar
+    #     institution: Sharif University of Technology
+    #     date: "Summer 2024 and Spring 2025"
+    #     summary: >
+    #       Attended the seminar under the supervision of Professor Amir Daneshgar.
+    #
+    #   - name: Differential Privacy Reading Group
+    #     institution: Sharif University of Technology
+    #     date: "Spring 2025"
+    #     summary: >
+    #       Participated in a reading group and seminar under the supervision
+    #       of Professor Javad B. Ebrahimi.
 
     Teaching and Mentorship:
       - company: The Chinese University of Hong Kong
         position: Teaching Assistant
+        start_date: "2026"
+        end_date: "Present"
         highlights:
           - "Fourier Analysis with Engineering Applications — Fall 2026"
+
       - company: Sharif University of Technology
+        start_date: "2022"
+        end_date: "2025"
         position: Teaching Assistant
         highlights:
           - "High-Dimensional Probability — Fall 2025"

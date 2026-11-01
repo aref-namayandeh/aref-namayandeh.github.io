@@ -70,7 +70,7 @@
               {% endif %}
               {% if cv.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Title</b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ cv.label }}</td>
                 </tr>
               {% endif %}
@@ -112,7 +112,7 @@
         <!-- Summary -->
         {% if cv.summary %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
+            <h3 class="card-title font-weight-medium">Summary</h3>
             <p>{{ cv.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         {% endif %}
@@ -158,8 +158,9 @@
                 {% assign entries = section_entries %}
                 {% include cv/awards.liquid %}
               {% elsif section_title == 'Publications' %}
-                {% assign entries = section_entries %}
-                {% include cv/publications.liquid %}
+                <p class="card-text font-weight-light">
+                  See <a href="{{ '/publications/' | relative_url }}">Publication</a>.
+                </p>
               {% elsif section_title == 'Skills' %}
                 {% assign entries = section_entries %}
                 {% include cv/skills.liquid %}
@@ -178,6 +179,40 @@
               {% elsif section_title == 'References' %}
                 {% assign entries = section_entries %}
                 {% include cv/references.liquid %}
+              {% elsif section_title == 'Talks' %}
+                {% for entry in section_entries %}
+                  <ul class="card-text font-weight-light list-group list-group-flush">
+                    <li class="list-group-item">
+                      {% if entry.title %}
+                        <h6 class="title font-weight-bold">{{ entry.title }}</h6>
+                      {% endif %}
+
+                      {% if entry.organization %}
+                        <div>{{ entry.organization }}</div>
+                      {% endif %}
+
+                      {% if entry.location %}
+                        <div>{{ entry.location }}</div>
+                      {% endif %}
+
+                      {% if entry.date %}
+                        <div class="text-muted">{{ entry.date }}</div>
+                      {% endif %}
+
+                      {% if entry.summary %}
+                        <div>
+                          {{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}
+                        </div>
+                      {% endif %}
+
+                      {% if entry.url %}
+                        <div>
+                          <a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">Talk details</a>
+                        </div>
+                      {% endif %}
+                    </li>
+                  </ul>
+                {% endfor %}
               {% elsif section_title == 'Reading Groups and Seminars' %}
                 {% for entry in section_entries %}
                   <ul class="card-text font-weight-light list-group list-group-flush">
@@ -237,7 +272,7 @@
               {% endif %}
               {% if basics.label %}
                 <tr>
-                  <td class="p-1 pr-2 font-weight-bold"><b>Professional Title</b></td>
+                  <td class="p-1 pr-2 font-weight-bold"><b>Title</b></td>
                   <td class="p-1 pl-2 font-weight-light">{{ basics.label }}</td>
                 </tr>
               {% endif %}
@@ -279,7 +314,7 @@
         <!-- Summary -->
         {% if site.data.resume.basics.summary %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">Professional Summary</h3>
+            <h3 class="card-title font-weight-medium">Summary</h3>
             <p>{{ site.data.resume.basics.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
           </div>
         {% endif %}

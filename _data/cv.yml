@@ -25,7 +25,7 @@ cv:
         area: Information Engineering
         studyType: Doctor of Philosophy
         start_date: "2026-08"
-        end_date: Present
+        end_date: "Present"
         highlights:
           - "Supervisor: Professor Chandra Nair"
           - "Expected completion: 2030–2031"
@@ -47,12 +47,6 @@ cv:
         studyType: High School Diploma
         start_date: "2018"
         end_date: "2021"
-
-    #Research Interests:
-    #  - name: Theoretical Computer Science
-    #    keywords: >
-    #      Information Theory, High-Dimensional Statistics, Probability Theory,
-    #      Randomized Algorithms, Probabilistic Combinatorics, Stochastic Processes
 
     Research Experience:
       - company: Okinawa Institute of Science and Technology (OIST)

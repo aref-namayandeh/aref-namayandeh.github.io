@@ -1,0 +1,30 @@
+{% assign raw_date = include.value | strip %}
+{% assign parts = raw_date | split: '-' %}
+{% assign normalized_date = raw_date | downcase %}
+
+{% if normalized_date == 'present' %}
+  Present
+{% elsif parts.size == 2 %}
+  {% assign month_number = parts[1] | plus: 0 %}
+  {% assign month_index = month_number | minus: 1 %}
+  {% assign month_names = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," %}
+  {% assign month_name = month_names[month_index] %}
+  {% if month_number > 0 and month_number <= 12 %}
+    {{ month_name }} {{ parts[0] }}
+  {% else %}
+    {{ raw_date }}
+  {% endif %}
+{% elsif parts.size == 3 %}
+  {{ raw_date | date: "%b %-d, %Y" }}
+{% elsif raw_date contains ' ' %}
+  {% assign date_parts = raw_date | split: ' ' %}
+  {% if date_parts.size == 2 %}
+    {{ raw_date | date: "%b %Y" }}
+  {% elsif date_parts.size == 3 %}
+    {{ raw_date | date: "%b %-d, %Y" }}
+  {% else %}
+    {{ raw_date }}
+  {% endif %}
+{% else %}
+  {{ raw_date }}
+{% endif %}

@@ -1,0 +1,88 @@
+{% comment %}
+  Unified projects entry renderer for both formats
+  Handles both:
+  - RenderCV: name, date (or start_date/end_date), url, summary, highlights
+  - JSONResume: name, startDate/endDate, url, summary, highlights
+{% endcomment %}
+
+<ul class="card-text font-weight-light list-group list-group-flush">
+  {% for entry in entries %}
+    <li class="list-group-item">
+      {% comment %} `capture` keeps the surrounding whitespace, so strip before testing for emptiness {% endcomment %}
+      {% capture start_date %}
+        {% if entry.start_date %}{{ entry.start_date }}{% elsif entry.startDate %}{{ entry.startDate }}{% endif %}
+      {% endcapture %}
+      {% assign start_date = start_date | strip %}
+      {% capture end_date %}
+        {% if entry.end_date %}{{ entry.end_date }}{% elsif entry.endDate %}{{ entry.endDate }}{% endif %}
+      {% endcapture %}
+      {% assign end_date = end_date | strip %}
+      {% comment %}
+        A project usually carries a single point-in-time `date` rather than a start/end pair. `al_cv_sort_by_date`
+        already orders on it, so render it too rather than silently dropping the badge.
+      {% endcomment %}
+      {% capture point_date %}
+        {% if entry.date %}{{ entry.date }}{% elsif entry.releaseDate %}{{ entry.releaseDate }}{% endif %}
+      {% endcapture %}
+      {% assign point_date = point_date | strip %}
+
+      {% if start_date != '' %}
+        {% capture formatted_start %}
+          {% include cv/format_date.liquid value=start_date %}
+        {% endcapture %}
+        {% assign formatted_start = formatted_start | strip %}
+        {% if end_date != '' %}
+          {% capture formatted_end %}
+            {% include cv/format_date.liquid value=end_date %}
+          {% endcapture %}
+          {% assign formatted_end = formatted_end | strip %}
+        {% else %}
+          {% assign formatted_end = 'Present' %}
+        {% endif %}
+        {% assign date = formatted_start | append: ' - ' | append: formatted_end %}
+      {% elsif point_date != '' %}
+        {% capture date %}
+          {% include cv/format_date.liquid value=point_date %}
+        {% endcapture %}
+        {% assign date = date | strip %}
+      {% else %}
+        {% assign date = null %}
+      {% endif %}
+
+      {% capture entry_body %}
+        {% if entry.url %}
+          <h6 class="title font-weight-bold">
+            <a href="{{ entry.url }}" target="_blank">{{ entry.name }}</a>
+          </h6>
+        {% else %}
+          <h6 class="title font-weight-bold">{{ entry.name }}</h6>
+        {% endif %}
+
+        {% if entry.summary %}
+          <p>{{ entry.summary | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        {% endif %}
+
+        {% include cv/entry_extras.liquid entry=entry %}
+      {% endcapture %}
+
+      {% if date %}
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column">
+            <table class="table-cv">
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0">{{ entry_body }}</div>
+        </div>
+      {% else %}
+        {{ entry_body }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

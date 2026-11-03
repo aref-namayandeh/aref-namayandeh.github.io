@@ -356,6 +356,10 @@ Your CV can be created using one of two formats. Choose the format that works be
    - [`assets/rendercv/settings.yaml`](../assets/rendercv/settings.yaml) — RenderCV settings
 3. To display only this format, delete [`assets/json/resume.json`](../assets/json/resume.json) (optional)
 
+CV entries across sections support `highlights` for bullet points and `notes` for additional Markdown text. In Education,
+Experience, and Projects, ISO dates such as `2026-07` and `2026-07-15` display as `Jul 2026` and `Jul 15, 2026`,
+respectively.
+
 ### JSONResume Format
 
 [`assets/json/resume.json`](../assets/json/resume.json) uses the [JSONResume](https://jsonresume.org/) standard format, which is compatible with other tools and services.

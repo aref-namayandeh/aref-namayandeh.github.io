@@ -1,0 +1,21 @@
+{% assign bullet_items = include.entry.highlights %}
+{% if bullet_items == blank %}
+  {% assign bullet_items = include.entry.bullets %}
+{% endif %}
+
+{% if include.entry.courses or bullet_items != blank %}
+  <ul class="items">
+    {% for item in include.entry.courses %}
+      <li><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+    {% endfor %}
+    {% for item in bullet_items %}
+      <li><span class="item">{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</span></li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% if include.entry.notes %}
+  <div class="mt-2">
+    {{ include.entry.notes | markdownify }}
+  </div>
+{% endif %}

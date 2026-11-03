@@ -1,6 +1,6 @@
 cv:
   name: Aref Namayandeh
-  label: PhD Student in Information Engineering
+  label: PhD Student
   email: aref [at] ie.cuhk.edu.hk
   location: Hong Kong SAR
   image: ""
@@ -48,6 +48,22 @@ cv:
         start_date: "2018"
         end_date: "2021"
 
+    Publications:
+      - notes: >
+          See [Publications](/publications/) or [Google Scholar](https://scholar.google.com/citations?user=YISPKZIAAAAJ).
+
+    Talks:
+      - organization: Institute For Research In Fundamental Sciences (IPM), Tehran, Iran
+        location: IPM
+        date: "2026-11"
+        title: An entropic approach to the sumset inequalities
+        #url: "https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0"
+        highlights:
+          - "November 4, 2026 (Online)"
+          - "[Slides](#) &#124; [Talk Information](https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0)"
+
+        # notes: >
+        #   Additional information about the talk.
     Research Experience:
       - company: Okinawa Institute of Science and Technology (OIST)
         position: Research Intern
@@ -76,32 +92,6 @@ cv:
         summary: >
           Research on complete forcing numbers of graphs under the
           supervision of Professor Javad B. Ebrahimi.
-
-    Publications:
-      - title: Bounds on the Complete Forcing Numbers of Graphs
-        authors:
-          - J. B. Ebrahimi
-          - A. Namayandeh
-          - E. Tohidi
-        publisher: Discrete Applied Mathematics
-        releaseDate: "2026"
-        url: https://doi.org/10.1016/j.dam.2025.10.030
-
-      - title: Complete Forcing Numbers of the Rooks Graphs
-        authors:
-          - J. B. Ebrahimi
-          - A. Namayandeh
-        publisher: Discrete Applied Mathematics
-        releaseDate: "2026"
-        url: https://doi.org/10.1016/j.dam.2025.10.031
-
-    Talks:
-      - organization: IPM Institute For Research In Fundamental Sciences
-        location: Tehran, Iran (online)
-        date: "Nov 4, 2026"
-        title: An entropic approach to the sumset inequalities
-        url: "https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0"
-        summary: "Slides"
 
     # Reading Groups and Seminars:
     #   - name: Cryptography and Theory of Computation Seminar
@@ -148,19 +138,19 @@ cv:
           Taught high school mathematics and prepared students for
           Mathematical and Informatics Olympiad examinations.
 
-    Honors and Awards:
-      - title: First Rank in Class
-        date: "2025"
-        awarder: Sharif University of Technology
-        summary: "Ranked first among 41 Computer Science students, with a GPA of 19.37/20."
+    # Honors and Awards:
+    #   - title: First Rank in Class
+    #     date: "2025"
+    #     awarder: Sharif University of Technology
+    #     summary: "Ranked first among 41 Computer Science students, with a GPA of 19.37/20."
 
-      - title: Silver Medal in the Iranian Mathematical Olympiad
-        date: "2020-10"
-        awarder: Young Scholars Club
+    #   - title: Silver Medal in the Iranian Mathematical Olympiad
+    #     date: "2020-10"
+    #     awarder: Young Scholars Club
 
-      - title: University Entrance Examination
-        date: "2021-07"
-        summary: "Ranked 66th among approximately 165,000 candidates (top 0.04%)."
+    #   - title: University Entrance Examination
+    #     date: "2021-07"
+    #     summary: "Ranked 66th among approximately 165,000 candidates (top 0.04%)."
 
     Languages:
       - name: Persian

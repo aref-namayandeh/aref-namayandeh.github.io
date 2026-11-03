@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: PhD Student in Information Engineering, CUHK
+subtitle: "(Official name: Aref Namayandehnajar)"
 
 profile:
   align: right
@@ -48,11 +48,10 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-## Under Construction.
 
 I am a PhD student in [Information Engineering](https://www.ie.cuhk.edu.hk/) at The Chinese University of Hong Kong (CUHK), where I am supervised by Professor [Chandra Nair](https://chandra.ie.cuhk.edu.hk/). I received my BSc in Computer Science from Sharif University of Technology.
 
-My research interests lie in information theory, and combinatorics. I am particularly interested in information-theoretic methods in additive combinatorics, entropy inequalities,m and converse bounds.
+My research interests lie in information theory, and combinatorics. I am particularly interested in information-theoretic methods in additive combinatorics, entropy inequalities, and converse bounds.
 
 ---
 

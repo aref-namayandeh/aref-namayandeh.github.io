@@ -51,7 +51,7 @@ latest_posts:
 
 I am a PhD student in [Information Engineering](https://www.ie.cuhk.edu.hk/) at The Chinese University of Hong Kong (CUHK), where I am supervised by Professor [Chandra Nair](https://chandra.ie.cuhk.edu.hk/). I received my BSc in Computer Science from Sharif University of Technology.
 
-My research interests lie in information theory, and combinatorics. I am particularly interested in information-theoretic methods in additive combinatorics, entropy inequalities, and converse bounds.
+My research interests broadly lie in information theory, probability, and combinatorics. Recently, I have been working on information-theoretic inequalities and their connections to additive combinatorics. More generally, I am open to work on topics involving converse results, entropic bounds, and information measures, particularly in network information theory, statistics, and concentration of measure.
 
 ---
 

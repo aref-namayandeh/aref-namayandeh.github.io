@@ -27,7 +27,7 @@ cv:
         start_date: "2026-08"
         end_date: "Present"
         highlights:
-          - "Supervisor: Professor Chandra Nair"
+          - "Supervisor: Chandra Nair"
           - "Expected completion: 2030–2031"
 
       - institution: Sharif University of Technology
@@ -37,7 +37,7 @@ cv:
         start_date: "2021-10"
         end_date: "2026-02"
         highlights:
-          - Minoring in Mathematics
+        #  - Minoring in Mathematics
           - "GPA: 19.37/20"
           - "Class rank: 1/41"
 
@@ -60,7 +60,7 @@ cv:
         #url: "https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0"
         highlights:
           - "November 4, 2026 (Online)"
-          - "[Slides](#) &#124; [Talk Information](https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0)"
+          - "[Slides](/assets/pdf/IPM_Talk_04112026.pdf) &#124; [Talk Information](https://ipm.ir/event/11111/An%20Entropic%20Approach%20to%20the%20Sumset%20Inequalities?lang=en&type=0)"
 
         # notes: >
         #   Additional information about the talk.
@@ -80,8 +80,7 @@ cv:
         start_date: "2025-07"
         end_date: "2025-09"
         summary: >
-          On-site research on approximation algorithms for the
-          Rectilinear Steiner Arborescence problem under the supervision
+          On-site research on approximation algorithms under the supervision
           of Professor Evangeline F. Y. Young.
 
       - company: Sharif University of Technology
@@ -157,4 +156,4 @@ cv:
         summary: Native
 
       - name: English
-        summary: "TOEFL iBT: 100"
+        summary: "Advanced"
